@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="UberCSS.css">
+        <title>Group 7 Uber Clone</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-image: url('https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+                }
+            </style>
+    </head>
+    
+    <body>
+        <h1 class="temptitle">Sample GUI Deliverable</h1>
+        <h2 class="apptitle">Uber Application Login</h2>
+
+        <div id="outer">
+            <div class="inner"><button onclick="document.getElementById('PassengerPopout').style.display='block'" class="passenger">Passenger Login</button></div>
+            <div class="inner"><button onclick="document.getElementById('AdminPopout').style.display='block'" class="admin">Administrator Login</button></div>
+            <div class="inner"><button onclick="document.getElementById('DriverPopout').style.display='block'" class="driver">Driver Login</button></div>
+        </div>
+        
+        <div id="PassengerPopout" class="modal">
+            <form class="modal-settings animate" action="passengerPage.html">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('PassengerPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="http://clipart-library.com/new_gallery/2-28998_icon-person-transparent-background.png" alt="Avatar" class="settings">
+                </div>
+
+                <div class="container">
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="user" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
+          
+                    <button type="submit">Login</button>
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('PassengerPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="DriverPopout" class="modal">
+            <form class="modal-settings animate" action="driverPage.html">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('DriverPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="http://clipart-library.com/img/1947852.png" alt="Avatar" class="settings">
+                </div>
+                
+                <div class="container">
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="user" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
+          
+                    <button type="submit">Login</button>
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('DriverPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="AdminPopout" class="modal">
+            <form class="modal-settings animate" action="adminPage.html">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('AdminPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://www.pikpng.com/pngl/b/528-5285918_admin-comments-transparent-background-admin-icon-clipart.png" alt="Avatar" class="settings">
+                </div>
+                
+                <div class="container">
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="user" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
+          
+                    <button type="submit">Login</button>
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('AdminPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
