@@ -13,13 +13,15 @@
     </head>
     
     <body>
-        <h1 class="temptitle">Sample GUI Deliverable</h1>
-        <h2 class="apptitle">Uber Application Login</h2>
+        <h1 class="temptitle">Uber Clone</h1>
+        <h2 class="apptitle">Home Login Page</h2>
 
         <div id="outer">
             <div class="inner"><button onclick="document.getElementById('PassengerPopout').style.display='block'" class="passenger">Passenger Login</button></div>
-            <div class="inner"><button onclick="document.getElementById('AdminPopout').style.display='block'" class="admin">Administrator Login</button></div>
             <div class="inner"><button onclick="document.getElementById('DriverPopout').style.display='block'" class="driver">Driver Login</button></div>
+            <br>
+            <div class="inner"><button onclick="document.getElementById('AdminPopout').style.display='block'" class="admin">Administrator Login</button></div>
+            <div class="inner"><button onclick="document.getElementById('NewPopout').style.display='block'" class="create">Create Account</button></div>
         </div>
         
         <div id="PassengerPopout" class="modal">
@@ -87,6 +89,37 @@
           
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('AdminPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="NewPopout" class="modal">
+            <form class="modal-settings animate" action="index.html">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('NewPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                
+                <div class="container">
+                    <label for="name"><b>Full Name</b></label>
+                    <input type="text" placeholder="Enter Full Name" name="name" required>
+
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="user" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
+
+                    <label for="cc"><b>Credit Card</b></label>
+                    <input type="number" placeholder="Enter Credit Card #" name="cc" required>
+
+                    <label for="type"><b>Type of Account</b></label>
+                    <input type="number" placeholder="1: Passenger, 2: Driver" name="type" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('NewPopout').style.display='none'" class="cancelbtn">Cancel</button>
                 </div>
             </form>
         </div>

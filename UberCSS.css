@@ -32,17 +32,22 @@ button {
 
 .passenger {
     background-color: #00b7ff;
-    float: left;
-
+    width: 200px;
 }
 
 .driver {
     background-color: #0051ff;
-    float: right;
+    width: 200px;
+}
+
+.create {
+    background-color: #00ff55;
+    width: 200px;
 }
 
 .admin {
     background-color: #770000;
+    width: 200px;
 }
 
 .register {
