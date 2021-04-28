@@ -94,28 +94,31 @@
         </div>
 
         <div id="NewPopout" class="modal">
-            <form class="modal-settings animate" action="index.html">
+            <form class="modal-settings animate" action="insert.php" method="post">
                 <div class="imgholder">
                     <span onclick="document.getElementById('NewPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
                 </div>
                 
                 <div class="container">
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
                     <label for="name"><b>Full Name</b></label>
                     <input type="text" placeholder="Enter Full Name" name="name" required>
 
-                    <label for="user"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="user" required>
-          
-                    <label for="pass"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pass" required>
-
                     <label for="cc"><b>Credit Card</b></label>
-                    <input type="number" placeholder="Enter Credit Card #" name="cc" required>
+                    <input type="number" placeholder="Enter Credit Card #" name="ccard" required>
 
                     <label for="type"><b>Type of Account</b></label>
-                    <input type="number" placeholder="1: Passenger, 2: Driver" name="type" required>
+                    <td>
+                        <input type="radio" name="type" value="d" required>Driver
+                        <input type="radio" name="type" value="p" required>Passenger
+                    </td>
                     <br>
-                    <button type="submit">Login</button>
+                    <button type="submit" value="Submit">Register</button>
                 </div>
           
                 <div class="container" style="background-color:#f1f1f1">
