@@ -106,6 +106,16 @@ button {
     padding: 10px 18px;
     background-color: #f44336;
 }
+
+.acceptbtn {
+    padding: 10px 18px;
+    background-color: #60cf5c;
+}
+
+.tablebrdr {
+    border-bottom: 1px solid #444444; 
+    padding: 10px;
+}
   
 /* button hovers */
 button:hover {
