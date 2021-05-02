@@ -20,7 +20,9 @@
             <div class="inner"><button onclick="document.getElementById('RegisterPopout').style.display='block'" class="register">Register For Driving</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
             <div class="inner"><button onclick="document.getElementById('ProfilePopout').style.display='block'" class="profile">Setup/View Profile</button></div>
+            <div class="inner"><button onclick="document.getElementById('NewPopout').style.display='block'" class="create">Create Account</button></div>
         </div>
+
 
         <div id="ReportsPopout" class="modal">
             <form class="modal-settings animate" action="/action_page.php">
@@ -57,6 +59,39 @@
           
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('RegisterPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div id="NewPopout" class="modal">
+            <form class="modal-settings animate" action="insert.php" method="post">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('NewPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                
+                <div class="container">
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+          
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                    <label for="name"><b>Full Name</b></label>
+                    <input type="text" placeholder="Enter Full Name" name="name" required>
+
+                    <label for="cc"><b>Credit Card</b></label>
+                    <input type="number" placeholder="Enter Credit Card #" name="ccard" required>
+
+                    <label for="type"><b>Type of Account</b></label>
+                    <td>
+                        <input type="radio" name="type" value="d" required>Driver
+                        <input type="radio" name="type" value="p" required>Passenger
+                    </td>
+                    <br>
+                    <button type="submit" value="Submit">Register</button>
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('NewPopout').style.display='none'" class="cancelbtn">Cancel</button>
                 </div>
             </form>
         </div>
