@@ -12,11 +12,20 @@
     padding-top: 100px;
 }
 
+
 .modal-settings {
     background-color: #ffffff;
     margin: 5px auto; 
     border: 1px solid rgb(133, 133, 133);
     width: 50%; 
+}
+
+.modalMap-settings {
+    background-color: #ffffff;
+    margin: 5px auto; 
+    border: 1px solid rgb(133, 133, 133);
+    width: 820px;
+    height: 700px;
 }
   
 /* Buttons */
@@ -63,6 +72,18 @@ button {
 
 .profile {
     background-color: #a6ff00;
+    float: left;
+
+}
+
+.map {
+    background-color: #2600ff;
+    float: left;
+
+}
+
+.rides {
+    background-color: #ff00d4;
     float: left;
 
 }
