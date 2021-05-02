@@ -80,10 +80,11 @@
                     <span onclick="document.getElementById('RidesPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings"> -->
                     <h3>Ride Requests</h3>
-                    <table style="width:100%; border-top: 1px solid #444444; border-collapse: collapse;">
+                    <table style="width: 100%; position: center; border-top: 1px solid #444444; border-collapse: collapse;">
                         <thead>
                             <tr>
                                 <th class="tablebrdr"><b>Name</b></th>
+                                <th class="tablebrdr"><b>Rating</b></th>
                                 <th class="tablebrdr"><b>Accept?</b></th>
                             </tr>
                         </thead>
@@ -91,16 +92,19 @@
                         <tbody>
                             <tr>
                                 <td class="tablebrdr">John Smith</td>
+                                <td class="tablebrdr">4.2</td>
                                 <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
                             </tr>
 
                             <tr>
                                 <td class="tablebrdr">Jeff Jeffman</td>
+                                <td class="tablebrdr">3.7</td>
                                 <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
                             </tr>
 
                             <tr>
                                 <td class="tablebrdr">Des Pacito</td>
+                                <td class="tablebrdr">4.1</td>
                                 <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
                             </tr>
                         </tbody>
