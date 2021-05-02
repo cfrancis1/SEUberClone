@@ -20,12 +20,14 @@
             <div class="inner"><button onclick="document.getElementById('RequestPopout').style.display='block'" class="request">Register For Driving</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
             <div class="inner"><button onclick="document.getElementById('ProfilePopout').style.display='block'" class="profile">Setup/View Profile</button></div>
+            <div class="inner"><button onclick="document.getElementById('MapPopout').style.display='block'" class="map">View Map</button></div>
+            <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Rides</button></div>
         </div>
 
         <div id="RequestPopout" class="modal">
             <form class="modal-settings animate" action="/action_page.php">
                 <div class="imgholder">
-                    <span onclick="document.getElementById('REquestPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span onclick="document.getElementById('RequestPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
                 </div>
           
@@ -48,17 +50,42 @@
             </form>
         </div>
 
-        <div id="RegisterPopout" class="modal">
+        <div id="ReportsPopout" class="modal">
             <form class="modal-settings animate" action="/action_page.php">
                 <div class="imgholder">
-                    <span onclick="document.getElementById('RegisterPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span onclick="document.getElementById('ReportsPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
                 </div>
           
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('RegisterPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('ReportsPopout').style.display='none'" class="cancelbtn">Cancel</button>
                 </div>
             </form>
         </div>
+
+        <div id="MapPopout" class="modal">
+            <form class="modalMap-settings animate" action="/action_page.php">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('MapPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380513.7159859942!2d-88.01214778988322!3d41.83339250495681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1619970587358!5m2!1sen!2sus" 
+                    width="800" height="650" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="RidesPopout" class="modal">
+            <form class="modal-settings animate" action="/action_page.php">
+                <div class="imgholder">
+                    <span onclick="document.getElementById('RidePopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
+                </div>
+          
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('RidesPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
     </body>
 </html>
