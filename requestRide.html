@@ -60,21 +60,30 @@
             </form>
         </div>
         <div id="NewPopout" class="modal">
-            <form class="modal-settings animate" action="insert.php" method="post">
+            <form class="modal-settings animate" action="rideConfirmed.html" method="post">
                 <div class="imgholder">
                     <span onclick="document.getElementById('NewPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
                 </div>
                 
                 <div class="container">
                     <label for="ride_type"><b>Ride Type</b></label>
-                    <input type="text" placeholder="Ride Type" name="ride_type" required>
+                    <select>
+                        <option value="single">Single</option>
+                        <option value="double">Two Passengers</option>
+                        <option value="group">Group</option>
+                    </select>
           
                     <label for="avail"><b>Availability</b></label>
-                    <input type="text" placeholder="Availabilty" name="avail" required>
+                    <select>
+                        <option value="asap">ASAP</option>
+                        <option value="30min">15-30 Minutes</option>
+                        <option value="hour">>60 Minutes</option>
+                    </select>
 
                     <label for="name"><b>Cost</b></label>
                     <input type="number" placeholder="Cost" name="cost" required>
-                    <button type="submit" value="Submit">Register</button>
+                    <button type="submit" onclick="sessionStorage.setItem('ride_type', 'ride_type');"value="Submit">Request Ride</button>
+                    
                 </div>
           
                 <div class="container" style="background-color:#f1f1f1">
