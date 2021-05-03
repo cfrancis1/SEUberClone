@@ -65,6 +65,11 @@ button {
 
 }
 
+.signout {
+    background-color: #770000;
+    float: left;
+}
+
 .reports {
     background-color: #8c00ff;
     float: right;
