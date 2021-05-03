@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             //password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             if(mysqli_stmt_execute($stmt)){
-                header("location: login.php");
+                header("location: index.html");
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -111,7 +111,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-secondary ml-2" value="Reset">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>    
 </body>

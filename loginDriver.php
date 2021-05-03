@@ -2,7 +2,7 @@
 session_start();
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: driverPage.php");
     exit;
 }
 require_once "config.php";
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
-                            header("location: welcome.php");
+                            header("location: driverPage.php");
                         } else{
                             $login_err = "Invalid password."; //not vaild pass
                         }
