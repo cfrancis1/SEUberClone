@@ -17,37 +17,22 @@
         <h2 class="apptitle">Driver</h2>
 
         <div id="outer">
-            <div class="inner"><button onclick="document.getElementById('RegisterPopout').style.display='block'" class="register">Register For Driving</button></div>
+            <div class="inner"><button onclick="document.getElementById('RequestPopout').style.display='block'" class="request">Register For Driving</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
             <div class="inner"><button onclick="document.getElementById('ProfilePopout').style.display='block'" class="profile">Setup/View Profile</button></div>
             <div class="inner"><button onclick="document.getElementById('MapPopout').style.display='block'" class="map">View Map</button></div>
             <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Rides</button></div>
         </div>
 
-        <div id="RegisterPopout" class="modal">
-            <form class="modal-settings animate" action="register.php" method="post">
+        <div id="RequestPopout" class="modal">
+            <form class="modal-settings animate" action="/action_page.php">
                 <div class="imgholder">
-                    <span onclick="document.getElementById('RegisterPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span onclick="document.getElementById('RequestPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
                 </div>
           
-                <div class="container">
-                    <label for="name"><b>Display Name</b></label>
-                    <input type="text" placeholder="Enter Name" name="name" required>
-
-                    <label for="make"><b>Car Make</b></label>
-                    <input type="text" placeholder="Enter Make" name="make" required>
-          
-                    <label for="model"><b>Car Model</b></label>
-                    <input type="text" placeholder="Enter Model" name="model" required>
-
-                    <label for="maxP"><b>Car Max Passengers</b></label>
-                    <input type="number" placeholder="Enter Car Max Passengers" name="maxP" required>
-
-                    <button type="submit" value="Submit">Register for Driving</button>
-                </div>
-
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('RegisterPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('RequestPopout').style.display='none'" class="cancelbtn">Cancel</button>
                 </div>
             </form>
         </div>
