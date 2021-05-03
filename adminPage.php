@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
+    header("location: index.html");
     exit;
 }
 ?>
@@ -30,7 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div id="outer">
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="register">View Reports</button></div>
             <div class="inner"><button onclick="document.getElementById('SurveyPopout').style.display='block'" class="reports">Send Survey</button></div>
-            <div class="inner"><button onclick="document.getElementById('RegisterPopout').style.display='block'" class="register">Setup/View Profile</button></div>
+            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">Edit Profile</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
         </div>
 
