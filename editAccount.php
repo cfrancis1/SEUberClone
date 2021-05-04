@@ -129,7 +129,7 @@ if(isset($_POST['update4'])) {
                 <br>
                 <input type="submit" name="update4" value="Update Password"/>
             </form>
-            <button onclick="window.location.href='passengerPage.php'">Return to Passenger Page</button>
+            <button onclick="window.location.href='index.html'">Return to Home Page</button>
         </div>
 
         <?php 
