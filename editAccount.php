@@ -2,13 +2,10 @@
 session_start();
 require_once "config.php";
 
-if(isset($_POST['update'])) {
-    $cc1 = $_POST['cc1'];
-    $cc2 = $_POST['cc2'];
-    $cc3 = $_POST['cc3'];
+if(isset($_POST['update1'])) {
+    $cc = $_POST['cc'];
 
-    //something with these 2 lines isnt working but im to tired
-    $sql = "UPDATE 'accounts' SET 'cc1'=$cc1, 'cc2'=$cc2, 'cc3'=$cc3 WHERE id = '".$_SESSION['id']."'"; 
+    $sql = "UPDATE accounts SET cc1='$cc' WHERE id = '".$_SESSION['id']."'"; 
     $update = mysqli_query($link, $sql);
 
     if($update){
@@ -16,7 +13,50 @@ if(isset($_POST['update'])) {
         echo "Credit Card successfully updated!.";
     } else {
         //echo "$cc1";
-        echo "Update Unsuccessful.";
+        echo "Update Unsuccessful." . mysqli_error($link);
+    }
+}
+if(isset($_POST['update2'])) {
+    $cc = $_POST['cc'];
+
+    $sql = "UPDATE accounts SET cc2='$cc' WHERE id = '".$_SESSION['id']."'"; 
+    $update = mysqli_query($link, $sql);
+
+    if($update){
+        //echo "$cc1";
+        echo "Credit Card successfully updated!.";
+    } else {
+        //echo "$cc1";
+        echo "Update Unsuccessful." . mysqli_error($link);
+    }
+}
+if(isset($_POST['update3'])) {
+    $cc = $_POST['cc'];
+
+    $sql = "UPDATE accounts SET cc3='$cc' WHERE id = '".$_SESSION['id']."'"; 
+    $update = mysqli_query($link, $sql);
+
+    if($update){
+        //echo "$cc1";
+        echo "Credit Card successfully updated!.";
+    } else {
+        //echo "$cc1";
+        echo "Update Unsuccessful." . mysqli_error($link);
+    }
+}
+
+if(isset($_POST['update4'])) {
+    $password = $_POST['password'];
+
+    $sql = "UPDATE accounts SET password='$password' WHERE id = '".$_SESSION['id']."'"; 
+    $update = mysqli_query($link, $sql);
+
+    if($update){
+        //echo "$cc1";
+        echo "Password successfully updated!.";
+    } else {
+        //echo "$cc1";
+        echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
 ?>
@@ -39,7 +79,7 @@ if(isset($_POST['update'])) {
 </head>
 <body>
     <div class="wrapper">
-        <h2>Your Account Information</h2>
+        <h2 class="apptitle">Your Account Information</h2>
         <h4>
         <?php
             $query = "SELECT * FROM accounts WHERE id = '".$_SESSION['id']."'"; //This is very close i believe
@@ -79,13 +119,15 @@ if(isset($_POST['update'])) {
         </h3>
         <div class="return">
             <form action="" method="POST">
-                <input type="number" name="cc1" placeholder="Enter Credit Card 1 Number"/>
+                <input type="number" name="cc" placeholder="Enter Credit Card Number"/>
                 <br>
-                <input type="number" name="cc2" placeholder="Enter Credit Card 2 Number"/>
+                <input type="submit" name="update1" value="Update Credit Card 1"/>
+                <input type="submit" name="update2" value="Update Credit Card 2"/>
+                <input type="submit" name="update3" value="Update Credit Card 3"/>
                 <br>
-                <input type="number" name="cc3" placeholder="Enter Credit Card 3 Number"/>
+                <input type="text" name="password" placeholder="Enter New Password"/>
                 <br>
-                <input type="submit" name="update" value="update data"/>
+                <input type="submit" name="update4" value="Update Password"/>
             </form>
             <button onclick="window.location.href='passengerPage.php'">Return to Passenger Page</button>
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2021 at 09:40 PM
+-- Generation Time: May 04, 2021 at 06:07 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -31,46 +31,32 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `name` varchar(40) NOT NULL
+  `name` varchar(40) NOT NULL,
+  `cc1` bigint(16) NOT NULL,
+  `cc2` bigint(16) NOT NULL,
+  `cc3` bigint(16) NOT NULL,
+  `totalCash` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `name`) VALUES
-(10, 'very fat', '$2y$10$9rd8b42Vtxxan', 'kacper is'),
-(11, '123456', '$2y$10$7BZCoPZdyounL', '1234'),
-(12, 'dandan', '$2y$10$owNdnAMq2AGSk', 'dan'),
-(13, 'dogdog', '123456', 'dog');
+INSERT INTO `accounts` (`id`, `username`, `password`, `name`, `cc1`, `cc2`, `cc3`, `totalCash`) VALUES
+(19, 'cfrancis1', '123456', 'Christian Francis', 1234123412341234, 5678567856785678, 9090909090909090, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `credit_cards`
+-- Table structure for table `ride_request`
 --
 
-CREATE TABLE `credit_cards` (
+CREATE TABLE `ride_request` (
   `id` int(11) NOT NULL,
-  `uid` int(11) NOT NULL,
-  `cc1` bigint(20) NOT NULL,
-  `cc2` bigint(20) NOT NULL,
-  `cc3` bigint(20) NOT NULL,
-  `cc4` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drive_signup`
---
-
-CREATE TABLE `drive_signup` (
-  `id` int(11) NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `make` varchar(30) NOT NULL,
-  `model` varchar(30) NOT NULL,
-  `maxP` int(4) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `availability` varchar(30) NOT NULL,
+  `cost` float NOT NULL,
+  `passengers` int(11) NOT NULL,
   `uid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -85,16 +71,9 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `credit_cards`
+-- Indexes for table `ride_request`
 --
-ALTER TABLE `credit_cards`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `uid` (`uid`);
-
---
--- Indexes for table `drive_signup`
---
-ALTER TABLE `drive_signup`
+ALTER TABLE `ride_request`
   ADD PRIMARY KEY (`id`),
   ADD KEY `username` (`uid`);
 
@@ -106,18 +85,12 @@ ALTER TABLE `drive_signup`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `credit_cards`
+-- AUTO_INCREMENT for table `ride_request`
 --
-ALTER TABLE `credit_cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `drive_signup`
---
-ALTER TABLE `drive_signup`
+ALTER TABLE `ride_request`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -125,16 +98,10 @@ ALTER TABLE `drive_signup`
 --
 
 --
--- Constraints for table `credit_cards`
+-- Constraints for table `ride_request`
 --
-ALTER TABLE `credit_cards`
-  ADD CONSTRAINT `credit_cards_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `accounts` (`id`);
-
---
--- Constraints for table `drive_signup`
---
-ALTER TABLE `drive_signup`
-  ADD CONSTRAINT `drive_signup_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `accounts` (`id`);
+ALTER TABLE `ride_request`
+  ADD CONSTRAINT `ride_request_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `accounts` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
