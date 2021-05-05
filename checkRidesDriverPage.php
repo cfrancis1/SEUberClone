@@ -3,7 +3,6 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="UberCSS.css">
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=false" src="//maps.google.com/maps/api/js?sensor=false"></script>
         <title>Group 7 Uber Clone</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
