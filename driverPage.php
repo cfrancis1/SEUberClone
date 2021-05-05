@@ -30,7 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="inner"><button onclick="document.getElementById('RequestPopout').style.display='block'" class="request">Register For Driving</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
             <div class="inner"><button onclick="document.getElementById('ProfilePopout').style.display='block'" class="profile">Setup/View Profile</button></div>
-            <div class="inner"><button onclick="document.getElementById('MapPopout').style.display='block'" class="map">View Map</button></div>
+            <div class="inner"><button onclick="getLocation()" class="map">View Map</button></div>
             <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Rides</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
             <div id="mapholder"></div>
