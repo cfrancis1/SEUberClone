@@ -41,22 +41,48 @@ if(isset($_POST['submit'])) {
         <h2 class="apptitle">Requst Ride</h2>
 
         <div id="outer">
-            <div class="inner"><button onclick="document.getElementById('RegisterPopout').style.display='block'" class="register">View Available Drivers</button></div>
+            <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="register">View Available Drivers</button></div>
 <br>
             <div class="inner"><button onclick="document.getElementById('NewPopout').style.display='block'" class="create">Specify Ride Details</button></div>
 <br>
             <div class="inner"><button onclick="window.location.href='index.html'">Return to Home Page</button></div>
         </div>
 
-        <div id="RegisterPopout" class="modal">
+        <div id="RidesPopout" class="modal">
             <form class="modal-settings animate" action="/action_page.php">
                 <div class="imgholder">
-                    <span onclick="document.getElementById('RegisterPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('RegisterPopout').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span onclick="document.getElementById('RidesPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <h3>Ride Requests</h3>
+                    <table style="width: 100%; position: center; border-top: 1px solid #444444; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th class="tablebrdr"><b>Name</b></th>
+                                <th class="tablebrdr"><b>Rating</b></th>
+                                <th class="tablebrdr"><b>Accept?</b></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="tablebrdr">John Smith</td>
+                                <td class="tablebrdr">4.2</td>
+                                <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="tablebrdr">Jeff Jeffman</td>
+                                <td class="tablebrdr">3.7</td>
+                                <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="tablebrdr">Des Pacito</td>
+                                <td class="tablebrdr">4.1</td>
+                                <td class="tablebrdr"><button type="button" onclick="acceptRide()" class="acceptbtn">Accept</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
             </form>
         </div>
