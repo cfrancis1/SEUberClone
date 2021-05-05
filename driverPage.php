@@ -27,38 +27,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 class="apptitle">Driver</h2>
 
         <div id="outer">
-            <div class="inner"><button onclick="document.getElementById('RequestPopout').style.display='block'" class="request">Register For Driving</button></div>
+            <div class="inner"><button onclick="window.location.href='checkRides.php'" class="request">View Passenger Requests</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
-            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">Edit Profile</button></div>
+            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">View/Edit Profile</button></div>
             <div class="inner"><button onclick="document.getElementById('MapPopout').style.display='block'" class="map">View Map</button></div>
-            <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Rides</button></div>
+            <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Ratings</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
-        </div>
-
-        <div id="RequestPopout" class="modal">
-            <form class="modal-settings animate" action="/action_page.php">
-                <div class="imgholder">
-                    <span onclick="document.getElementById('RequestPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('RequestPopout').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="ProfilePopout" class="modal">
-            <form class="modal-settings animate" action="/action_page.php">
-                <div class="imgholder">
-                    <span onclick="document.getElementById('ProfilePopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('ProfilePopout').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
         </div>
 
         <div id="ReportsPopout" class="modal">

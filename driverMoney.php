@@ -14,6 +14,10 @@
     </head>
 
     <body>
-        <h1 class="temptitle">Ride Confirmed, your driver will be with you shortly</h1>
+        <h1 class="temptitle">Your Payment has been deposited</h1>
+        <h2 class="temptitle">Click this button to return to the Driver Menu</h2>
+        <div id="outer">
+            <div class="inner"><button onclick="window.location.href='driverPage.php'" class="driver">Driver Menu</button></div>
+        </div>
     </body>
 </html>

@@ -28,9 +28,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 class="apptitle">Passenger</h2>
 
         <div id="outer">
-            <div class="inner"><button onclick="window.location.href='requestRide.html'" class="register">Find a Ride</button></div>
+            <div class="inner"><button onclick="window.location.href='requestRide.php'" class="register">Find a Ride</button></div>
             <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="reports">Administrative Reports</button></div>
-            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">Edit Profile</button></div>
+            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">View/Edit Account</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
         </div>
 
