@@ -75,8 +75,6 @@
                 document.getElementById('RidesPopout').style.display='none'
             }
 
-            var x = document.getElementById("demo");
-
             function getLocation() {
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(showPosition);
@@ -86,7 +84,6 @@
             }
 
             function showPosition(position) {
-            //x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
                 var latlon = position.coords.latitude + "," + position.coords.longitude;
                 
                 var img = document.createElement('img');

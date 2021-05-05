@@ -33,6 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="inner"><button onclick="document.getElementById('MapPopout').style.display='block'" class="map">View Map</button></div>
             <div class="inner"><button onclick="document.getElementById('RidesPopout').style.display='block'" class="rides">Check Rides</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
+            <div id="mapholder"></div>
         </div>
 
         <div id="RequestPopout" class="modal">
@@ -129,6 +130,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             function acceptRide(){
                 alert("Ride accepted successfully!");
                 document.getElementById('RidesPopout').style.display='none'
+            }
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                var latlon = position.coords.latitude + "," + position.coords.longitude;
+                
+                var img = document.createElement('img');
+                var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=600x500&sensor=false&key=AIzaSyA3VmqZEnx9lDQue59WTzvmg2DYbppo-Gw";
+                document.getElementById('mapholder').innerHTML = "<img src='"+img_url+"'>";
             }
         </script>
 
