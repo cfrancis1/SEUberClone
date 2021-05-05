@@ -122,7 +122,6 @@ button {
     padding: 10px;
 }
   
-/* button hovers */
 button:hover {
     opacity: 0.8;
 }
@@ -207,3 +206,12 @@ img.settings {
 h4 {
     text-align: center;
 }
+
+h5 {
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }

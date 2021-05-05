@@ -2,7 +2,6 @@
 // Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.html");
     exit;
@@ -28,49 +27,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 class="apptitle">Admin</h2>
 
         <div id="outer">
-            <div class="inner"><button onclick="document.getElementById('ReportsPopout').style.display='block'" class="register">View Reports</button></div>
-            <div class="inner"><button onclick="document.getElementById('SurveyPopout').style.display='block'" class="reports">Send Survey</button></div>
-            <div class="inner"><button onclick="window.location.href='editAccount.php'" class="profile">Edit Profile</button></div>
+            <div class="inner"><button onclick="window.location.href='allData.php'" class="register">View All Data</button></div>
             <div class="inner"><button onclick="window.location.href='logout.php'" class="signout">Sign Out</button></div>
         </div>
 
-        <div id="ReportsPopout" class="modal">
-            <form class="modal-settings animate" action="/action_page.php">
-                <div class="imgholder">
-                    <span onclick="document.getElementById('ReportsPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('ReportsPopout').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="SurveyPopout" class="modal">
-            <form class="modal-settings animate" action="/action_page.php">
-                <div class="imgholder">
-                    <span onclick="document.getElementById('SurveyPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('SurveyPopout').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="RegisterPopout" class="modal">
-            <form class="modal-settings animate" action="/action_page.php">
-                <div class="imgholder">
-                    <span onclick="document.getElementById('RegisterPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Temporary_plate.svg/601px-Temporary_plate.svg.png" alt="Avatar" class="settings">
-                </div>
-          
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('RegisterPopout').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
     </body>
 </html>
