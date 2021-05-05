@@ -2,21 +2,6 @@
 session_start();
 require_once "config.php";
 
-// if(isset($_POST['remove'])) {
-    
-
-//     $sql = "DELETE FROM ride_request WHERE id = '".$_SESSION['id']."'"; 
-//     $update = mysqli_query($link, $sql);
-
-//     if($update){
-//         //echo "$cc1";
-//         echo "Credit Card successfully updated!.";
-//     } else {
-//         //echo "$cc1";
-//         echo "Update Unsuccessful." . mysqli_error($link);
-//     }
-// }
-
 ?>
 
 
@@ -26,7 +11,7 @@ require_once "config.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Account</title>
+    <title>Active Rides</title>
     <link rel="stylesheet" href="UberCSS.css">
     <style>
         body {
@@ -37,23 +22,23 @@ require_once "config.php";
 </head>
 <body>
     <h2 class="apptitle">Passenger Ride Requests</h2>
-    <h3 class="apptitle">Click Select next to the Passenger's info to accept request</h2>
+    <h3 class="apptitle">Click Select next to the Passenger's info to accept request</h3>
     <div>
 
         <h4>
         <table style="width:80%" class="center">
+        <tr>
+            <th>Name</th>
+            <th>Pick Up</th>
+            <th>Drop Off</th>
+            <th>Expected Arrival at Pick Up</th>
+            <th>Travel Distance</th>
+            <th>Total Passengers</th>
+        </tr>
         <?php
-            $query = "SELECT * FROM ride_request"; //This is very close i believe
+            $query = "SELECT * FROM ride_request";
             $rows = mysqli_query($link, $query);
             while($row = mysqli_fetch_assoc($rows)) {
-                echo "<tr>";
-                echo "<th>Name</th>";
-                echo "<th>Pick Up</th>";
-                echo "<th>Drop Off</th>";
-                echo "<th>Expected Arrival at Pick Up</th>";
-                echo "<th>Travel Distance</th>";
-                echo "<th>Total Passengers</th>";
-                echo "</tr>";
 
                 echo "<tr>";
                 echo "<td>" . $row['name'] . "</td>";

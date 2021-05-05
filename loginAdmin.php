@@ -1,24 +1,21 @@
 <?php
 session_start();
- 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: adminPage.php");
-    exit;
-}
+
 require_once "config.php";
- 
-// Define variables
+
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
+    //username check
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
         $username = trim($_POST["username"]);
     }
     
+    //pass check
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
@@ -26,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     if(empty($username_err) && empty($password_err)){
-        $sql = "SELECT id, username, password FROM accounts WHERE username = ?";
+        $sql = "SELECT id, username, password FROM admin_accounts WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);

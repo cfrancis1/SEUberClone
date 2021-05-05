@@ -9,7 +9,6 @@ $update = mysqli_query($link, $remove);
 
 
 if(isset($_POST['delivered'])) {
-    //$distance = $_GET['distance'];
     $moneyPerMile = 4;
     $total = $distance * $moneyPerMile;
 
@@ -25,8 +24,6 @@ if(isset($_POST['delivered'])) {
     }
 }
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -50,8 +47,6 @@ if(isset($_POST['delivered'])) {
         <form method="post" action="">
             <button name="delivered">Passenger Delivered</button>
         </form>
-
-        <!-- onclick="window.location.href='driverMoney.php'" -->
 
         <?php 
         if(!empty($login_err)){

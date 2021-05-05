@@ -122,7 +122,6 @@ button {
     padding: 10px;
 }
   
-/* button hovers */
 button:hover {
     opacity: 0.8;
 }

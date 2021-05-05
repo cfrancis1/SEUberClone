@@ -11,10 +11,8 @@ if(isset($_POST['update1'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Credit Card successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -25,10 +23,8 @@ if(isset($_POST['update2'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Credit Card successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -39,10 +35,8 @@ if(isset($_POST['update3'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Credit Card successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -55,10 +49,8 @@ if(isset($_POST['update5'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Favorite Location successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -69,10 +61,8 @@ if(isset($_POST['update6'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Favorite Location successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -83,10 +73,8 @@ if(isset($_POST['update7'])) {
     $update = mysqli_query($link, $sql);
 
     if($update){
-        //echo "$cc1";
         echo "Favorite Location successfully updated!.";
     } else {
-        //echo "$cc1";
         echo "Update Unsuccessful." . mysqli_error($link);
     }
 }
@@ -109,10 +97,8 @@ if(isset($_POST['update4'])) {
         $update = mysqli_query($link, $sql);
 
         if($update){
-            //echo "$cc1";
             echo "Password successfully updated!.";
         } else {
-            //echo "$cc1";
             echo "Update Unsuccessful." . mysqli_error($link);
         }
     }
@@ -209,7 +195,7 @@ if(isset($_POST['update4'])) {
                 <input type="submit" name="update2" value="Update Credit Card 2"/>
                 <input type="submit" name="update3" value="Update Credit Card 3"/>
                 <br>
-                <input type="number" name="favL" placeholder="Enter Favorite Location"/>
+                <input type="text" name="favL" placeholder="Enter Favorite Location"/>
                 <br>
                 <input type="submit" name="update5" value="Update Favorite Location 1"/>
                 <input type="submit" name="update6" value="Update Favorite Location 2"/>

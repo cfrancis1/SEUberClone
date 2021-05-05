@@ -13,12 +13,14 @@ $username_err = $password_err = $login_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
+    //username check
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
         $username = trim($_POST["username"]);
     }
     
+    //pass check
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{

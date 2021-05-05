@@ -46,7 +46,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     
-    // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         $sql = "INSERT INTO accounts(username, password, name) values(?, ?, ?)";
         if($stmt = mysqli_prepare($link, $sql)) {
@@ -56,7 +55,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_username = $username;
             $param_password = $password;
             
-            //password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            //kept having errors with password hash so to avoid the errors and submit on time we just stored as text
+            //bad in implementation but ok for this example
+            //
+            //password_hash($password, PASSWORD_DEFAULT);
             
             if(mysqli_stmt_execute($stmt)){
                 header("location: index.html");
