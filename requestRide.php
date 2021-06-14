@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
             <form class="modal-settings animate" action="/action_page.php">
                 <div class="imgholder">
                     <span onclick="document.getElementById('RidesPopout').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <h3>Ride Requests</h3>
+                    <h3>Available Drivers</h3>
                     <table style="width: 100%; position: center; border-top: 1px solid #444444; border-collapse: collapse;">
                         <thead>
                             <tr>
